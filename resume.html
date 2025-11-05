@@ -35,7 +35,7 @@
         });
     
         // 加载并渲染Markdown文件
-        fetch('README.md')  // 修改为你的Markdown文件路径
+        fetch('resume.md')  // 修改为你的Markdown文件路径
           .then(response => response.text())
           .then(text => {
             document.getElementById('content').innerHTML = marked.parse(text);
