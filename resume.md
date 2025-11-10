@@ -1,6 +1,6 @@
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center">
   <div style="font-size: 22px; margin: 10px 0px"><strong>唐浩益</strong></div>
-  <div style="font-size: 16px; margin: 2px 0px 27px 0">📱15728044760 | 📧 530063113@qq.com</div>
+  <div style="font-size: 16px; margin: 2px 0px 27px 0">📱15728044760 | 📧 530063113@qq.com | xdnloveme@gmail.com</div>
 </div>
 
 ### 教育经历
