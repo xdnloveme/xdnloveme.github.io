@@ -203,6 +203,55 @@ RUNTIME.bridge.on('update', somethings);
 RUNTIME.bridge.async().then(somethings)
 ```
 
+#### 具体案例细节实现如下
+```
+// 声明包的定义方式
+// 我们首先在我们的容器层，定义我们需要导出的包，比如这里是一个class的分类
+
+// Container.ts 容器层
+class DemoLib extends ClassLib<Interface> implements SomeThingDecl {
+    protected bizId = YOUR_BIZ_NAME;
+
+    get ModuleClass() {
+        return this.getApi(FUN_KEY.ModuleClass);
+    }
+}
+
+export let DEMO_LIB: SomeThingDecl;
+
+registerLib<ClassLib<any, any>>(() => new DemoLib());
+
+registerLibProxy(framework => {
+    DEMO_LIB = framework.getLib<SomeThingDecl>(YOUR_BIZ_NAME);
+});
+
+/**
+* -------------------分割线---------------------
+*/
+
+// .h文件的声明层
+// 这里会映射到这个类型DemoLib
+import type DemoLib from 'somewhere'
+
+export type {
+    DemoLIB
+}
+
+/**
+* -------------------业务B使用---------------------
+*/
+import { DEMO_LIB } from '@private/lib';
+
+import ModuleClass = DEMO_LIB.ModuleClass;
+
+// 业务B开发如此使用
+// 可以继承从import引入的某个class
+class PlanBClass extends ModuleClass {
+    // dosomething
+}
+
+```
+
 ### 如何解决沙箱隔离问题和版本管理，监控？
 
 #### 沙箱问题：Proxy代理解决
