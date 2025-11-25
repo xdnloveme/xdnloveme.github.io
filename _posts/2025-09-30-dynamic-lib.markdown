@@ -226,7 +226,7 @@ registerLibProxy(framework => {
 });
 
 /**
-* -------------------分割线---------------------
+* -------------------声明文件---------------------
 */
 
 // .h文件的声明层
@@ -236,6 +236,15 @@ import type DemoLib from 'somewhere'
 export type {
     DemoLIB
 }
+
+/**
+* -------------------业务A链接逻辑---------------------
+*/
+
+InjectorIOBootstrap.registerInjector('DemoClassLinker', DemoClassLinker => {
+    DemoClassLinker.link<AbstractClass, AbstractClass>(CLASS_KEY.somekey, DemoClass);
+})
+// 连接完后就可以使用了
 
 /**
 * -------------------业务B使用---------------------
