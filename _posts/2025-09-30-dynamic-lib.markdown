@@ -1,4 +1,18 @@
-# 基于动态链接库的多业务共享架构
+---
+layout:     post
+title:      "基于C++动态链接库（.dll）的多业务应用共享架构"
+subtitle:   "ts的动态链接库"
+date:       2025-09-30
+author:     "Leon"
+header-img: "img/2025110116035317619842331798.jpg"
+tags:
+    - DLL动态链接库
+    - Typescript
+    - 微应用
+    - 架构设计
+---
+
+# 基于C++动态链接库的多业务共享架构
 
 ## 前言
 
