@@ -10,7 +10,7 @@
 ### 技术能力
 
 - **语言**：JavaScript/TypeScript/CSS/HTML/Nodejs/JAVA
-- **框架工具** ：React/Redux/Mobx/Webpack/Vite/后端微服务/微前端/WebGL可视化Canvas
+- **框架工具** ：React/React-Native/Redux/Mobx/Webpack/Vite/后端微服务/微前端/WebGL可视化Canvas
 - **业务技能**：AI MCP/前端工程化/CICD/设计模式/架构设计/微应用/动态链接库
 
 ### 个人网站和学习分享
